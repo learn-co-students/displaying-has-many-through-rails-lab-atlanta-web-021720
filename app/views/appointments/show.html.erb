@@ -1,0 +1,5 @@
+<h1><%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></h1>
+<h1><%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></h1>
+ <% finalTime = @appointment.appointment_datetime.to_formatted_s(:long) %>
+    <% parseTime = finalTime.split(" ")%>
+    <p>Appointment time: <%= parseTime[0]%> <%= parseTime[1] %> <%= parseTime[2] %> at <%= parseTime[3] %></p>
